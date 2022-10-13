@@ -307,6 +307,7 @@ _import_structure = {
     "models.poolformer": ["POOLFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP", "PoolFormerConfig"],
     "models.prophetnet": ["PROPHETNET_PRETRAINED_CONFIG_ARCHIVE_MAP", "ProphetNetConfig", "ProphetNetTokenizer"],
     "models.qdqbert": ["QDQBERT_PRETRAINED_CONFIG_ARCHIVE_MAP", "QDQBertConfig"],
+    "models.qdqroberta": ["QDQROBERTA_PRETRAINED_CONFIG_ARCHIVE_MAP", "QDQRobertaConfig"],
     "models.rag": ["RagConfig", "RagRetriever", "RagTokenizer"],
     "models.realm": ["REALM_PRETRAINED_CONFIG_ARCHIVE_MAP", "RealmConfig", "RealmTokenizer"],
     "models.reformer": ["REFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP", "ReformerConfig"],
@@ -1746,6 +1747,22 @@ else:
             "load_tf_weights_in_qdqbert",
         ]
     )
+    _import_structure["models.qdqroberta"].extend(
+        [
+            "QDQROBERTA_PRETRAINED_MODEL_ARCHIVE_LIST",
+            "QDQRobertaForMaskedLM",
+            "QDQRobertaForMultipleChoice",
+            "QDQRobertaForNextSentencePrediction",
+            "QDQRobertaForQuestionAnswering",
+            "QDQRobertaForSequenceClassification",
+            "QDQRobertaForTokenClassification",
+            "QDQRobertaLayer",
+            "QDQRobertaLMHeadModel",
+            "QDQRobertaModel",
+            "QDQBertPreTrainedModel",
+        ]
+    )
+
     _import_structure["models.rag"].extend(
         ["RagModel", "RagPreTrainedModel", "RagSequenceForGeneration", "RagTokenForGeneration"]
     )
@@ -3324,6 +3341,7 @@ if TYPE_CHECKING:
     from .models.poolformer import POOLFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP, PoolFormerConfig
     from .models.prophetnet import PROPHETNET_PRETRAINED_CONFIG_ARCHIVE_MAP, ProphetNetConfig, ProphetNetTokenizer
     from .models.qdqbert import QDQBERT_PRETRAINED_CONFIG_ARCHIVE_MAP, QDQBertConfig
+    from .models.qdqroberta import QDQROBERTA_PRETRAINED_CONFIG_ARCHIVE_MAP, QDQROBERTAConfig
     from .models.rag import RagConfig, RagRetriever, RagTokenizer
     from .models.realm import REALM_PRETRAINED_CONFIG_ARCHIVE_MAP, RealmConfig, RealmTokenizer
     from .models.reformer import REFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP, ReformerConfig
