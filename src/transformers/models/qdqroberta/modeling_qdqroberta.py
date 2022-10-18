@@ -69,6 +69,7 @@ _TOKENIZER_FOR_DOC = "RobertaTokenizer"
 
 QDQROBERTA_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "roberta-base",
+    "distilroberta-base",
     # See all RoBERTa models at https://huggingface.co/models?filter=roberta
 ]
 
